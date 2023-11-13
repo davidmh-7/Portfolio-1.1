@@ -1,0 +1,34 @@
+.CuadradoCV{
+    background-color: white;
+    border-radius: 10px;
+    width:35%;
+    height: 700px;
+    margin-top: 5%;
+}
+h6{
+    justify-content: center;
+    display: flex;
+}
+.cuadradoIzquierda{
+    background-color: rgb(179, 179, 179);
+    width: 35%;
+    height: 650px;
+    margin-top: 5%;
+    margin-left: 4%;
+    display: inline-block;
+
+}
+.cuadradoDerecha{
+    background-color: yellowgreen;
+    width: 55%;
+    height: 650px;
+    margin-top: 5%;
+    margin-left: 2%;
+    display: inline-block;
+}
+img{
+    width: 100%;
+    height: 50%;
+
+
+}

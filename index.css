@@ -1,0 +1,377 @@
+:root {
+    --paginaprincipal: #030303;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--paginaprincipal);
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.contenedor {
+    width: 90%;
+    margin: auto;
+    height: 70px;
+}
+
+header {
+    padding: 20px 0;
+}
+
+header .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logotipo {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    font-size: 40px;
+}
+
+header nav a {
+    color: #AAA;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+header nav a:hover,
+header nav a.activo {
+    color: #FFF;
+}
+main{
+  margin-bottom: 3%;
+}
+
+/* ---- ----- ----- Pagina Principal ----- ----- ----- */
+.paginaprincipal .contenedor {
+    margin: 0 auto;
+    margin-bottom: 6.25em;
+}
+
+.paginaprincipal .titulo {
+    font-weight: 600;
+    font-size: 3.12em;
+    margin-bottom: 0.4em;
+}
+
+.paginaprincipal .descripcion {
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.75em;
+    max-width: 50%;
+    margin-bottom: 1.25em;
+}
+
+.paginaprincipal .boton {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 0.31em;
+    padding: 0.93em 1.87em;
+    color: #fff;
+    margin-right: 1.25em;
+    cursor: pointer;
+    transition: .3s ease all;
+    font-size: 1.12em;
+}
+
+.paginaprincipal .boton:hover {
+    background: #fff;
+    color: #000;
+}
+
+.paginaprincipal .boton i {
+    margin-right: 1.25em;
+}
+
+img {
+    max-width: 320px;
+    float: left;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.imagenestexto {
+    margin: 150px auto;
+    width: 70%;
+}
+
+.textoimg {
+    color: #FFF;
+}
+
+.textoimg h2 {
+    font-size: 42px;
+
+}
+
+.textoimg p {
+    font-size: 16px;
+
+}
+
+.Tablasnegras {
+    margin-top: 500px;
+}
+
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+@media screen and (max-width: 800px) {
+    header .logotipo {
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+
+    header .contenedor {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .paginaprincipal {
+        font-size: 10px;
+        width: 90%;
+        height: 90%;
+    }
+
+    .paginaprincipal .descripcion {
+        max-width: 100%;
+    }
+
+    iframe {
+        max-width: 70%;
+        max-height: 70%;
+        margin-left: -10px;
+    }
+
+    .paginaprincipal {
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .imagenlambope {
+        max-width: 30%;
+        max-height: 30%;
+        margin-left: -50px;
+
+    }
+}
+
+.card {
+    overflow: visible;
+    width: 190px;
+    height: 254px;
+    margin-top: 1%;
+    margin-left: 10%;
+    margin-bottom: 10%;
+    display: inline-block;
+    margin: 10px;
+    
+  }
+  
+  .content {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 300ms;
+    box-shadow: 0px 0px 10px 1px #000000ee;
+    border-radius: 5px;
+  }
+  
+  .front, .back {
+    background-color: #151515;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .back {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .back::before {
+    position: absolute;
+    content: ' ';
+    display: block;
+    width: 160px;
+    height: 160%;
+    background: linear-gradient(90deg, transparent, #ff9966, #ff9966, #ff9966, #ff9966, transparent);
+    animation: rotation_481 5000ms infinite linear;
+  }
+  
+  .back-content {
+    position: absolute;
+    width: 99%;
+    height: 99%;
+    background-color: #151515;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .card:hover .content {
+    transform: rotateY(180deg);
+  }
+  
+  @keyframes rotation_481 {
+    0% {
+      transform: rotateZ(0deg);
+    }
+  
+    0% {
+      transform: rotateZ(360deg);
+    }
+  }
+  
+  .front {
+    transform: rotateY(180deg);
+    color: white;
+  }
+  
+  .front .front-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .front-content .badge {
+    background-color: #00000055;
+    padding: 2px 10px;
+    border-radius: 10px;
+    backdrop-filter: blur(2px);
+    width: fit-content;
+  }
+  
+  .description {
+    box-shadow: 0px 0px 10px 5px #00000088;
+    width: 100%;
+    padding: 10px;
+    background-color: #00000099;
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+  }
+  
+  .title {
+    font-size: 11px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .title p {
+    width: 50%;
+  }
+  
+  .card-footer {
+    color: #ffffff88;
+    margin-top: 5px;
+    font-size: 8px;
+  }
+  
+  .front .img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #ffbb66;
+    position: relative;
+    filter: blur(15px);
+    animation: floating 2600ms infinite linear;
+  }
+  
+  #bottom {
+    background-color: #ff8866;
+    left: 50px;
+    top: 0px;
+    width: 150px;
+    height: 150px;
+    animation-delay: -800ms;
+  }
+  
+  #right {
+    background-color: #ff2233;
+    left: 160px;
+    top: -80px;
+    width: 30px;
+    height: 30px;
+    animation-delay: -1800ms;
+  }
+  
+  @keyframes floating {
+    0% {
+      transform: translateY(0px);
+    }
+  
+    50% {
+      transform: translateY(10px);
+    }
+  
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  /* centrar las cards */
+  h5{
+    justify-content: center;
+    display: flex;
+    margin-top:2%;
+    margin-bottom:2%;
+    
+  }
+
+
+  /* Responsive */
+  @media only screen and (max-width: 431px) {
+    button{
+      margin-top: -10%;
+    
+    }
+    h5{
+      margin-top: 100px;
+      margin-bottom: 20px;
+    }
+    nav{
+      margin-top: 20px;
+      margin-right: 90%;
+    }
+
+    h3{
+      margin-top: -50%;
+      margin-bottom: 0;
+    }
+    .descripcion{
+      margin-top: -15%;
+      margin-top: 0.8%;
+    }
+}
+  
